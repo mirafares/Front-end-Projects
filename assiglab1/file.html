@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreprLabs Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <img src="prepr.jpg" alt="PreprLabs Logo" width="260" height="120">
+      <button onclick="darkMode()">Darkmode</button>
+    </nav>
+  </header>
+  <main>
+    <section id="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#" onclick="openTab('challenges')">Challenges</a></li>
+        <li><a href="#" onclick="openTab('labs')">Labs</a></li>
+        <li><a href="#" onclick="openTab('projects')">Projects</a></li>
+        <h2>Search</h2>
+        <input type="text" id="searchBar" placeholder="Search challenges...">
+        <input type="submit" value="Submit">
+      </ul>
+    </section>
+    <section id="content">
+        <div id="challenges" class="tab-content">
+            <h2>Challenges</h2>
+            <p>Web Developer Challange</p>
+            <img src="lab.jpg" alt="Challenges Image">
+            <p>Front end web developer is responsible for designing, coding, and modifying webpages using standard HTML/CSS practices.
+                 Full Stack web developers can also integrate data from various back-end services and databases.</p>
+          </div>
+          <div id="labs" class="tab-content">
+            <h2>Labs</h2>
+            <p>Prepr CARE Lab</p>
+            <img src="lab1.jpg" alt="Labs Image">
+            <p>Welcome to the CARE Lab, a space to collaborate and communicate ideas, resources, best practices, 
+            and awareness to help manage stress, relieve anxiety, and carry our collective burdens together. 
+            Participants are invited to share stories and resources while creating a safe space for everyone to share and learn from each other. 
+            Contributors are invited to host events and webinars that can be made accessible through the CARE Lab resources section.</p>
+          </div>
+          <div id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <p>This is the content for Projects.</p>
+            <img src="project.jpg" alt="Projects Image">
+            <p>Frontend Developer Challenge 1: Web Page Creation</p>
+          </div>
+
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

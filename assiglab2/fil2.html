@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+        <h2>Register</h2>
+        </div>
+        <div class="input-box">
+            <input type="text" class="input-field" id="username" autocomplete="off" required>
+            <label for="username">Username</label>
+
+        <div class="input-box">
+            <input type="text" class="input-field" id="email" autocomplete="off" required>
+            <label for="email">Email or phone</label>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" id="password" autocomplete="off" required>
+            <label for="password">Password</label>
+        </div>
+        <div class="input-box">
+            <select id="Status" required>
+                <option disabled selected>Select User type</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="employee">Employee</option>
+                <option value="other">Other</option>
+
+            </select>
+        </div>
+        
+            
+        <div class="forgot">
+
+        </div>
+        <div class="input-box">
+            <button onclick="register()">Register</button>
+        </div>
+
+        </div>
+        <p>Already have an account? <a href="fil3.html">Login here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

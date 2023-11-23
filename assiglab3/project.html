@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Project</title>
+</head>
+<body>
+    <header>
+        <h1>Create Project</h1>
+    </header>
+    <main>
+        <form id="projectForm" enctype="multipart/form-data">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" required></textarea>
+
+            <label for="coverImage">Cover Image:</label>
+            <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
+            <div id="imagePreviewContainer">
+                <img id="imagePreview" alt="Cover Image Preview">
+            </div>
+
+            <label for="projectCategory">Project Category:</label>
+            <select id="projectCategory" name="projectCategory" required>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile App Development</option>
+            </select>
+
+            <label for="challenge">Active Challenge:</label>
+            <select id="challenge" name="projectchallange" required>
+                <option value="1">Challenge 1</option>
+                <option value="2">Challange 2</option>
+                <option value="3">Challange 3</option>
+                <option value="4">Challange 4</option>
+
+            </select>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+
+            <label for="skillsRequired">Skills Required:</label>
+            <input type="text" id="skillsRequired" name="skillsRequired">
+
+            <label for="teamSize">Team Size:</label>
+            <input type="number" id="teamSize" name="teamSize" min="1" required>
+
+            <label for="Status">Status:</label>
+            <select id="Statues" name="Statues" required>
+                <option value="private">private</option>
+                <option value="public">public</option>
+            </select>
+
+            <!-- Add more form fields as needed -->
+
+            <button type="button" onclick="submitProject()">Submit</button>
+        </form>
+        <!-- Your project creation form goes here -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

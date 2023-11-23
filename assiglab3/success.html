@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Success</h2>
+        <div id="userDetails"></div>
+    </div>
+    <script>
+        // Retrieve user data from localStorage
+        var userData = localStorage.getItem('userData');
+
+        if (userData) {
+            // Display user details on the success page
+            document.getElementById('userDetails').innerHTML = '<p>' + userData.replace(/,/g, '<br>') + '</p>';
+        }
+        window.addEventListener('beforeunload', function () {
+            localStorage.removeItem('userData');
+        });
+    </script>
+</body>
+</html>

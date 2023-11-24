@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accessibility Window</title>
+</head>
+
+<body>
+        <!-- Disability Icon -->
+    <div id="disabilityIcon" class="icon" onclick="toggleAccessibilityWindow()">
+        <img src="disability-icon.png" alt="Accessibility Icon">
+    </div>
+    <!-- Accessibility Window -->
+    <div id="accessibilityWindow" onmousedown="startDrag()">
+        <div class="accessibilitySection">
+            <h3>Window Settings</h3>
+            <button id="closeWindowBtn" onclick="closeAccessibilityWindow()">Close Window</button>
+
+            <button id="changePositionBtn" onclick="changeWindowPosition()">Change Position</button>
+        </div>
+
+        <div class="accessibilitySection">
+            <h3>Language Options</h3>
+            <button id="languageBtn" onclick="toggleLanguageOptions()">Change Language</button>
+            <div id="languageOptions" style="display: none;">
+            <button onclick="changeLanguage('english')">English</button>
+            <button onclick="changeLanguage('spanish')">Spanish</button>
+            <button onclick="changeLanguage('french')">French</button>
+        </div>
+    </div>
+
+
+        <div class="accessibilitySection">
+            <h3>Toggle Options</h3>
+            <input checked="true" type="checkbox" class="switch">            
+        </div>
+            <button id="resetBtn" onclick="resetSettings()">Reset Settings</button>
+
+        <div class="accessibilitySection">
+            <h3>Search</h3>
+            <input type="text" id="searchInput" placeholder="Search..." >
+            <button type="submit" onclick="searchFunction(event)">Submit</button>
+
+        </div>
+    </div>
+
+    <header>
+        <h1>Welcome to Prepr Dashboard</h1>
+    </header>
+    <main>
+        <div class="dashboard-section" id="projectsSection">
+            <h2>Projects</h2>
+            <a href="project.html" id="createProjectBtn">
+                <button>Create Project</button>
+            </a>
+                <ul id="projectsList">
+                <!-- List of projects goes here -->
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </div>
+
+        <div class="dashboard-section" id="challengesSection">
+            <h2>Challenges</h2>
+            <ul id="challengesList">
+                <!-- List of challenges goes here -->
+                <li>Challenge 1</li>
+                <li>Challenge 2</li>
+                <li>Challenge 3</li>
+            </ul>
+        </div>
+
+        <div class="dashboard-section" id="labsSection">
+            <h2>Labs</h2>
+            <ul id="labsList">
+                <!-- List of labs goes here -->
+                <li>Lab 1</li>
+                <li>Lab 2</li>
+                <li>Lab 3</li>
+            </ul>
+        </div>
+
+        <div class="dashboardSection" id="discussionsSection">
+            <h2>Discussions</h2>
+            <ul id="discussionsList">
+                <!-- List of discussions goes here -->
+                <li>Discussion 1</li>
+                <li>Discussion 2</li>
+                <li>Discussion 3</li>
+            </ul>
+        </div>
+
+        <!-- Display projects here -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
